@@ -1,0 +1,13 @@
+# Mounts the read-only arbitrage radar host plugin. The browser strip is
+# discovered through the package's dsh.client manifest and ./client export.
+- insert:
+    - id: arbitrage-radar
+      name: 'dsh-onchain-arbitrage-radar'
+      # Every value below is optional; the defaults live in src/settings.js.
+      # Uncomment and change what you need, for example:
+      # config:
+      #   thresholds:
+      #     goBps: 40
+      #   scan:
+      #     symbols: [BTC, ETH]
+      config: {}

@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "On-chain Arbitrage Radar",
+    "description": "Read-only cross-venue spreads, funding crowding, tokenized-stock clock skew, a net-profit cost model and an execution gate for arbitrage research."
+  }
+}

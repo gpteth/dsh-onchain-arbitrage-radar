@@ -1,0 +1,57 @@
+{
+  "name": "dsh-onchain-arbitrage-radar",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Read-only on-chain arbitrage radar: cross-venue spreads, funding crowding, tokenized-stock clock skew, cost model and execution gate",
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "arbitrage",
+    "defi",
+    "onchain",
+    "market-data"
+  ],
+  "homepage": "https://github.com/gpteth/dsh-onchain-arbitrage-radar#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gpteth/dsh-onchain-arbitrage-radar.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gpteth/dsh-onchain-arbitrage-radar/issues"
+  },
+  "license": "Apache-2.0",
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "src/",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "README.zh.md",
+    "scripts/live-check.mjs"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "live": "node scripts/live-check.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}
